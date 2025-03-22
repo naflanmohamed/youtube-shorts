@@ -22,7 +22,7 @@ class ShortsScreen extends StatelessWidget {
     {'username': '@apple', 'description': 'New Iphone 16 Pro Max #iphone16'},
     {'username': '@google', 'description': 'How Google Cloud Works'},
     {'username': '@flutter', 'description': 'Flutter Widget Tutorial'},
-    {'username': '@computerscience', 'description': 'Computer Science Compiler Construction Full Course with in 2 hours'},
+    {'username': '@computer_science', 'description': 'Computer Science Compiler Construction Full Course with in 2 hours'},
     {'username': '@dell', 'description': 'New Dell Laptop Features'},
   ];
 
@@ -75,7 +75,6 @@ class ShortsScreen extends StatelessWidget {
                       icon: Icon(Icons.share, color: Colors.white, size: 40),
                       onPressed: () {},
                     ),
-
                   ],
                 ),
               ),
