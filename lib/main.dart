@@ -7,7 +7,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,14 +18,12 @@ class MyApp extends StatelessWidget {
 
 class ShortsScreen extends StatelessWidget {
   final List<Map<String, String>> videos = [
-    {'username': '@apple', 'description': 'New Iphone 16 Pro Max #iphone16'},
+    {'username': '@apple', 'description': 'New iPhone 16 Pro Max #iphone16'},
     {'username': '@google', 'description': 'How Google Cloud Works'},
     {'username': '@flutter', 'description': 'Flutter Widget Tutorial'},
-    {'username': '@computer_science', 'description': 'Computer Science Compiler Construction Full Course with in 2 hours'},
+    {'username': '@computer_science', 'description': 'Compiler Construction Full Course in 2 Hours'},
     {'username': '@dell', 'description': 'New Dell Laptop Features'},
   ];
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -36,14 +33,13 @@ class ShortsScreen extends StatelessWidget {
         itemCount: videos.length,
         itemBuilder: (context, index) {
           return Stack(
-            // fit: StackFit.loose,
             children: [
               // Video Placeholder
               Container(
                 color: Colors.black,
                 child: Center(
                   child: Text(
-                    'Video ${index + 1}',
+                    'Video...',
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
@@ -63,7 +59,7 @@ class ShortsScreen extends StatelessWidget {
                     SizedBox(height: 10),
                     IconButton(
                       icon: Icon(Icons.thumb_down, color: Colors.white, size: 40),
-                      onPressed: () {} ,
+                      onPressed: () {},
                     ),
                     SizedBox(height: 10),
                     IconButton(
@@ -87,9 +83,34 @@ class ShortsScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      videos[index]['username']!,
-                      style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold),
+                    // Username & Subscribe Button
+                    Row(
+                      children: [
+                        Text(
+                          videos[index]['username']!,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            foregroundColor: Colors.black,
+                            padding: EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                          ),
+                          child: Text(
+                            'Subscribe',
+                            style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ],
                     ),
                     SizedBox(height: 5),
                     Text(
